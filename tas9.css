@@ -5,6 +5,7 @@
   text-decoration: none;
   list-style: none;
 }
+
 .main {
   background-image: url("https://preview.colorlib.com/theme/tralive/assets/img/hero/h1_hero1.png.webp");
   background-repeat: no-repeat;
@@ -13,30 +14,35 @@
   height: 700px;
   margin-top: 100px;
 }
+
 .navbars {
   background-color: white;
-  max-width: 100%;
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 100px;
+  margin-right: 50px;
 }
+
 .navbar img {
   padding: 10px 30px;
 }
+
 ul {
   display: flex;
   justify-content: center;
   gap: 50px;
-  padding-right: 250px;
   font-size: 20px;
   font-family: "Dancing Script", cursive;
 }
+
 .line {
   display: inline-block;
   position: relative;
   color: #0087ca;
 }
+
 .line::after {
   content: "";
   position: absolute;
@@ -49,13 +55,16 @@ ul {
   transform-origin: bottom left;
   transition: transform 0.3s ease-out;
 }
+
 .line:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .line a:hover {
   color: blue;
 }
+
 .buton {
   background-color: orange;
   width: 170px;
@@ -64,26 +73,29 @@ ul {
   border-radius: 5px;
   border: none;
 }
+
 .buton i {
   position: absolute;
   top: 5px;
   left: 5px;
   font-size: 20px;
 }
+
 .container2 {
   margin: 10px;
 }
+
 .container2 h1 {
   text-align: center;
   padding-top: 80px;
-  /* padding-left: 50px;
-    padding-right: 50px; */
 }
+
 .container2 p {
   text-align: center;
   padding-top: 10px;
   position: relative;
 }
+
 .buton2 {
   width: 150px;
   height: 60px;
@@ -91,12 +103,15 @@ ul {
   background-color: black;
   border-radius: 5px;
   position: absolute;
-  top: 50px;
-  left: 500px;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .buton2 p {
   color: white;
 }
+
 .buton2 {
   position: relative;
   -webkit-transform: translateZ(0);
@@ -104,6 +119,7 @@ ul {
   -webkit-transition: color 1000ms;
   transition: color 1000ms;
 }
+
 .buton2::before {
   content: "";
   position: absolute;
@@ -122,16 +138,20 @@ ul {
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
 }
+
 .buton2:hover:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
+
 .main img {
-  align-items: center;
+  margin: 0 auto;
   padding: 20px;
   animation: car 10s ease-out 0s infinite normal none;
 }
+
 @keyframes car {
+
   0%,
   100% {
     transform: translateX(0);
@@ -165,12 +185,13 @@ ul {
   font-size: 20px;
   margin-top: 50px;
 }
+
 .card h2 {
   text-align: center;
-  font-size: 20px;
-  padding-top: 15px;
   font-size: 45px;
+  padding-top: 15px;
 }
+
 .product img {
   width: 100%;
   height: 250px;
@@ -178,44 +199,29 @@ ul {
   border-style: none;
   transform: scale(1);
 }
+
 .product img:hover {
   transform: scale(1.1);
 }
 
 .products {
   margin-top: 30px;
-  margin-left: 150px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  padding-bottom: 50px;
-  padding: 40px 80px;
+  padding: 40px 0;
   position: relative;
 }
-.product p {
-  right: 0;
-  /* color: #6ea3e4; */
-}
-.head {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  align-items: center;
-}
-.head p {
-  color: #6ea3e4;
-}
+
 .product {
   background-color: white;
   border: 2px solid white;
-  width: 23%;
-  /* border-radius: 20px; */
+  width: 30%;
   padding-bottom: 10px;
   position: relative;
 }
-.tarix {
-  padding: 5px 5px;
-}
+
 .tarix a {
   background-color: rgb(230, 235, 240);
   border-radius: 5px;
@@ -223,21 +229,70 @@ ul {
   color: #6ea3e4;
 }
 
-.icon3 {
-  position: relative;
-}
+.icon3 {}
+
 #right {
   position: absolute;
   left: 770px;
   top: 30%;
   font-size: 70px;
-  /* right: 50px; */
   color: rgb(167, 29, 29);
 }
+
 #left {
   position: absolute;
   top: 35%;
   right: 20px;
   font-size: 70px;
   color: rgb(167, 29, 29);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbars {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  ul {
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .navbar img {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .buton2 {
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .products {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .product {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .navbars {
+    padding-right: 100px;
+    margin-right: 50px;
+  }
+
+  .buton2 {
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .products {
+    margin-left: 150px;
+  }
 }
